@@ -20,6 +20,10 @@ nav {
   height: 60px;
   font-size: large;
   font-weight: 500;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 nav li {
@@ -88,6 +92,7 @@ nav a:hover {
 
 /* ================= HERO ================= */
 .hero-section {
+  margin-top: 40px;
   background-color: #fff;
   height: 660px;
 }
@@ -344,7 +349,7 @@ h4 {
   color: red;
   font-size: larger;
   font-weight: bolder;
-  animation: bounce 1.35s ease-in-out infinite both;
+  animation: bounce 1.40s ease-in-out infinite both;
 }
 
 /* Animation */
@@ -364,7 +369,7 @@ h4 {
     margin-top: 2px;
   }
   50% {
-    margin-top: 45px;
+    margin-top: 48px;
   }
   100% {
     margin-top: 2px;
