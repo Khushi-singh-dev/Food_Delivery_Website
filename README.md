@@ -89,9 +89,9 @@ Cart & payment system
 
 GitHub: https://github.com/khushi-singh-dev
 
-LinkedIn: https://linkedin.com/in/
+LinkedIn: https://linkedin.com/in/khushi-singh-68294028b
 
-YouTube: 
+YouTube: https://www.youtube.com/@KHUSHISATISHSINGH211
 
 ⭐ If you like this project
 
