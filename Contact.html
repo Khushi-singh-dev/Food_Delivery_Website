@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/img/delivery.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left-nav">
+          <img src="/img/image.png" alt="icon" height="38px" width="38px" id="img" />
+          <p id="Brandname">yumLicious</p>
+        </div>
+        <div class="center-nav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="delivery.html">Online Delivery</a></li>
+            <li><a href="Orders.html">Orders</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="About.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="right-nav">
+          <button class="btn signup-btn" id="openSignup">Sign up</button>
+          <button class="btn signup-btn" id="openSignup">Log in</button>
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+      </nav>
+             <!-- Signup Popup -->
+    <div class="signup-popup" id="signupPopup">
+      <div class="signup-box">
+        <span class="close-btn" id="closeSignup">&times;</span>
+        
+        <h2>Create Account</h2>
+
+        <form>
+          <input type="text" placeholder="Full Name" id="userName" required />
+          <input type="email" placeholder="Email Address" id="userEmail" required />
+          <input type="password" placeholder="Password" id="userPassword" minlength="6" required />
+          <button type="submit" class="submit-btn" id="sign-up-form">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    </header>
+    <main>
+        <div class="form-head">
+            <h1>Contact Details <span class="para"><span class="asterisk">*</span>shows required fields.</span></h1>
+        </div>
+        <div class="contact-page">
+            <form class="contact-form" >
+            <label for="Cus-name" required><span class="asterisk">*</span>Enter Your Name:</label>
+            <input type="text" name="name" class="inp" id="name"><br><br>
+            <label for="Cus-num" required><span class="asterisk">*</span>Mobile Number:</label>
+            <input type="number" name="Phone-no" class="inp" id="mob"><br><br>
+            <label for="Cus-email" required><span class="asterisk">*</span>Enter Your Email:</label>
+            <input type="email" name="email" class="inp" id="email" placeholder="abc123@gmail.com"><br><br>
+            <label for="feedback">Give Feedback:</label><br><br>
+            <textarea name="feedback" id="feedback" placeholder="How was the taste?"></textarea><br><br>
+            <label for="cus-help">How can we help you?</label><br><br>
+            <textarea name="feedback" id="feedback" placeholder="How can we help you?"></textarea><br><br>
+            <label for="company">Select Company</label><br><br>
+            <select name="company" id="company" placeholder="Select Company" >
+                <option value="Eternal" selected>Eternal</option>
+                <option value="yumLicious">yumLicious</option>
+                <option value="Blinkit">Blinkit</option>
+                <option value="Delicious">Delicious</option>
+                <option value="Hyperpure">Hyperpure</option>
+            </select><br><br>
+            <button value="submit" class="btn" id="form">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+      <div class="container-foot">
+        <div class="foot-details">
+          <div class="sec1">
+          <h4>yumLicious</h4>
+          <h3>About yumLicious</h3>
+          <br />
+          <ul class="foot-ul">
+            <li><a href="#">Eternal</a></li>
+            <br />
+            <li><a href="#">yumLicious</a></li>
+            <br />
+            <li><a href="#">Deloy</a></li>
+            <br />
+            <li><a href="#">Blinkit</a></li>
+            <br />
+            <li><a href="#">Zomato</a></li>
+            <br />
+            <li><a href="#">Hyperpure</a></li>
+            <br />
+            <li><a href="#">Feeding India</a></li>
+            <br />
+          </ul>
+        </div>
+        <div class="sec2">
+          <h3>Learn More</h3>
+          <br />
+          <ul class="foot-ul">
+            <li><a href="#">Privacy</a></li>
+            <br />
+            <li><a href="#">Security</a></li>
+            <br />
+            <li><a href="#">Terms of Sevice</a></li>
+            <br />
+            <li><a href="#">Help & Support</a></li>
+            <br />
+            <li><a href="#">Others</a></li>
+          </ul>
+        </div>
+        <div class="sec3">
+          <h3>For Delivery</h3>
+          <br />
+          <h3>& For Restaurents</h3>
+          <br />
+          <ul class="foot-ul">
+            <li><a href="#">Partners with Us</a></li>
+            <br />
+            <li><a href="#">Apps for You</a></li>
+            <br />
+            <li><a href="#">Others</a></li>
+          </ul>
+        </div>
+        <div class="sec4">
+          <h3>Social Links</h3>
+          <br />
+          <div class="links">
+          <div class="link"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="link"><i class="fa-brands fa-youtube"></i></div>
+          <div class="link"><i class="fa-brands fa-github"></i></div>
+          <div class="link"><i class="fa-brands fa-x-twitter"></i></div>
+          <div class="link"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+          <br />
+          <div class="App-store-link">
+            <img src="/img/delivery.png" alt="Appstore" height="28px" width="32px">
+            <div class="text">
+              <span>Download on the</span>
+              <span><h3>APP STORE</h3></span>
+            </div>
+          </div><br>
+          <div class="App-store-link">
+            <img src="https://static.vecteezy.com/system/resources/previews/022/484/501/non_2x/google-play-store-icon-logo-symbol-free-png.png" alt="playstore" height="30px" width="32px">
+            <div class="text">
+              <span>Get it on</span>
+              <span><h3>PLAY STORE</h3></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <br>
+      <div class="copyright">
+          <span>&copy;Copyright by yumLicious <small><sup>TM</sup></small> Pvt Ltd, You agree to your terms of service, privacy policy and content policies. All trademarks are the properties of the respective owners. All Rights Reserved 2025.</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
