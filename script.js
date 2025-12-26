@@ -22,23 +22,22 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// Form Validation and Submission
-// document
-//   .getElementById("contact-form")
-//   .addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     const name = document.getElementById("name").value;
-//     const email = document.getElementById("email").value;
-//     const message = document.getElementById("message").value;
+//Form Validation and Submission
+document
+  .getElementById("form")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const mob = document.getElementById("mob").value;
 
-//     if (name && email && message) {
-//       alert("Message Sent! We will get back to you soon.");
-//       // Here you would typically handle form submission via AJAX
-//       this.reset(); // Reset the form fields after submission
-//     } else {
-//       alert("Please fill in all fields.");
-//     }
-//   });
+    if (name && email && mob) {
+      alert(`Feedback Sent! Thankyou so much ${name} for your feedback.`);
+      this.reset(); // Reset the form fields after submission
+    } else {
+      alert("Please fill the all required fields.");
+    }
+  });
 
 document.getElementById("sign-up-form").addEventListener("click", function (e) {
     e.preventDefault();
