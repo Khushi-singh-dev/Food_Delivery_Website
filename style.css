@@ -140,7 +140,7 @@ nav a:hover {
 
 /* ================= FOOD SECTION ================= */
 .food-section {
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 
 .food-section h2 {
@@ -544,7 +544,7 @@ h4 {
 /* About Section */
 
 .about-container{
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .about-para{
@@ -612,6 +612,7 @@ h4 {
   width: 340px;
   height: auto;
   margin-left: 20px;
+  margin-bottom: 25px;
   transition: 0.7s;
 }
 .about-card:hover{
