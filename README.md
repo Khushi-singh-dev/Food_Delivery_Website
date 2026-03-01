@@ -51,19 +51,12 @@ Food-Delivery-Website/
 
 🚀 How to Run the Project
 
-1. Clone the repository
 
-2. git clone https://github.com/khushi-singh-dev/Food_Delivery_Website.git
+##  Live Demo
 
-3. Open the project folder
+🔗 Click here - https://khushi-singh-dev.github.io/Food_Delivery_Website/
 
-4. Double-click index.html
-
-5. View the website in your browser
-
-📸 Preview Demo of Food Delivery Website
-
-👉 https://youtu.be/WGBbQODYHFQ?si=NQKtHUoyoqQTG1DP
+ View the website in your browser
 
 🎯 Learning Outcomes
 
