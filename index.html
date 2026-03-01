@@ -1,434 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food Delivery</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/delivery.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="left-nav">
-          <img src="img/image.png" alt="icon" height="38px" width="38px" id="img" />
-          <p id="Brandname">yumLicious</p>
-        </div>
-        <div class="center-nav">
-          <ul class="nav-links">
-            <li><a href="delivery.html">Online Delivery</a></li>
-            <li><a href="Orders.html">Orders</a></li>
-            <li><a href="Contact.html">Contact Us</a></li>
-            <li><a href="About.html">About Us</a></li>
-          </ul>
-        </div>
-        <div class="right-nav">
-          <button class="btn signup-btn" id="openSignup">Sign up</button>
-          <button class="btn signup-btn" id="openSignup">Log in</button>
-          <div class="hamburger" onclick="toggleMenu()">☰</div>
-        </div>
-      </nav>
-             <!-- Signup Popup -->
-    <div class="signup-popup" id="signupPopup">
-      <div class="signup-box">
-        <span class="close-btn" id="closeSignup">&times;</span>
-        
-        <h2>Create Account</h2>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>yumLicious</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/delivery.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        <form>
-          <input type="text" placeholder="Full Name" id="userName" required />
-          <input type="email" placeholder="Email Address" id="userEmail" required />
-          <input type="password" placeholder="Password" id="userPassword" minlength="6" required />
-          <button type="submit" class="submit-btn" id="sign-up-form">Sign Up</button>
-        </form>
-      </div>
-    </div>
-    </header>
-             <!-- Main -->
-    <main>
-      <div class="hero-section">
-        <div class="hero-card">
-          <img src="img/burger.png" alt="burger" id="burger" />
-          <img
-            src="https://png.pngtree.com/png-clipart/20230421/original/pngtree-delicious-pizza-creative-photography-png-image_9071905.png"
-            alt="pizza"
-            class="img"
-          />
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/033/225/976/original/a-plate-of-steaming-hot-momos-isolated-on-background-png.png"
-            alt="Momos"
-            class="img2"
-          />
-          <p id="phrase">Your cravings, our mission</p>
-          <p class="para">Delicious meals from your favorite kitchens,</p>
-          <p class="para">
-            delivered fast and fresh right to your doorstep—because satisfying
-          </p>
-          <p class="para">
-            your cravings should be easy, enjoyable, and just a tap away.
-          </p>
-          <div class="text-box">
-            <div class="scroll-text">Scroll Down ▼</div>
-          </div>
-        </div>
-      </div>
-      <!--  FOOD SECTION  -->
-<section class="food-section container">
-  <h2>Best Food For You</h2>
+</head>
+<body>
 
-  <div class="food-grid">
+<!-- NAVBAR -->
+<nav class="navbar">
 
-    <!-- Card -->
-  <!-- 1 -->
-<article class="food-card">
-  <img src="img/burger.png" alt="Cheese Burger" />
-  <div class="card-body">
-    <h3>Cheese Burger</h3>
-    <p>Loaded with cheese and fresh veggies.</p>
+<div class="logo">
+<img src="img/delivery.png">
+<span>yumLicious</span>
+</div>
+<div class="menu-icon">&#9776;</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="Orders.html">Orders</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
 
-    <div class="card-footer">
-      <span class="price">₹129</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
+<div class="nav-buttons">
+<button class="btn-solid" onclick="openLogin()">Login</button>
+<button class="btn-solid" onclick="openSignup()">Signup</button>
+</div>
 
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
+</nav>
 
-<!-- 2 -->
-<article class="food-card">
-  <img src="img/pizza.png" alt="Margherita Pizza" />
-  <div class="card-body">
-    <h3>Margherita Pizza</h3>
-    <p>Classic pizza with rich tomato sauce.</p>
-
-    <div class="card-footer">
-      <span class="price">₹199</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 3 -->
-<article class="food-card">
-  <img src="img/momos.png" alt="Veg Momos" />
-  <div class="card-body">
-    <h3>Veg Momos</h3>
-    <p>Steamed momos with spicy chutney.</p>
-
-    <div class="card-footer">
-      <span class="price">₹89</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 4 -->
-<article class="food-card">
-  <img src="img/pasta.png" alt="White Sauce Pasta" />
-  <div class="card-body">
-    <h3>White Sauce Pasta</h3>
-    <p>Creamy pasta with Italian herbs.</p>
-
-    <div class="card-footer">
-      <span class="price">₹179</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 5 -->
-<article class="food-card">
-  <img src="img/fries.png" alt="French Fries" />
-  <div class="card-body">
-    <h3>French Fries</h3>
-    <p>Golden crispy fries with seasoning.</p>
-
-    <div class="card-footer">
-      <span class="price">₹79</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 6 -->
-<article class="food-card">
-  <img src="img/sandwich.png" alt="Grilled Sandwich" />
-  <div class="card-body">
-    <h3>Grilled Sandwich</h3>
-    <p>Fresh grilled sandwich with veggies.</p>
-
-    <div class="card-footer">
-      <span class="price">₹99</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 7 -->
-<article class="food-card">
-  <img src="img/paneer-tikka.png" alt="Paneer Tikka"/>
-  <div class="card-body">
-    <h3>Paneer Tikka</h3>
-    <p>Grilled paneer cubes with Indian spices.</p>
-
-    <div class="card-footer">
-      <span class="price">₹189</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 8 -->
-<article class="food-card">
-  <img src="img/chicken-biryani" alt="Chicken Biryani" />
-  <div class="card-body">
-    <h3>Chicken Biryani</h3>
-    <p>Aromatic rice cooked with tender chicken.</p>
-
-    <div class="card-footer">
-      <span class="price">₹249</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 9 -->
-<article class="food-card">
-  <img src="img/chole-bhature.png" alt="Chole Bhature" />
-  <div class="card-body">
-    <h3>Chole Bhature</h3>
-    <p>Spicy chickpea curry with fluffy bhature.</p>
-
-    <div class="card-footer">
-      <span class="price">₹159</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 10 -->
-<article class="food-card">
-  <img src="img/dosa.png" alt="Masala Dosa" />
-  <div class="card-body">
-    <h3>Masala Dosa</h3>
-    <p>Crispy dosa stuffed with spiced potato.</p>
-
-    <div class="card-footer">
-      <span class="price">₹119</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 11 -->
-<article class="food-card">
-  <img src="img/fried-rice.png" alt="Veg Fried Rice" />
-  <div class="card-body">
-    <h3>Veg Fried Rice</h3>
-    <p>Wok-tossed rice with fresh vegetables.</p>
-
-    <div class="card-footer">
-      <span class="price">₹139</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
-<!-- 12 -->
-<article class="food-card">
-  <img src="img/ice-cream.png" alt="Chocolate Ice Cream" />
-  <div class="card-body">
-    <h3>Chocolate Ice Cream</h3>
-    <p>Rich and creamy chocolate delight.</p>
-
-    <div class="card-footer">
-      <span class="price">₹69</span>
-      <button class="btn-solid">Buy Now</button>
-    </div>
-
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-    </div>
-  </div>
-</article>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Delicious Food, Delivered To Your Door</h1>
+    <p>Order from your favourite restaurants anytime</p>
     
+    <input type="text" placeholder="Search for food or restaurants...">
+    <button onclick="location.href='restaurant.html'">Order Now</button>
   </div>
 </section>
 
-    </main>
-             <!-- Footer -->
-    <footer>
-      <div class="container-foot">
-        <div class="foot-details">
-          <div class="sec1">
-          <h4>yumLicious</h4>
-          <h3>About yumLicious</h3>
-          
-          <ul class="foot-ul">
-            <li><a href="#">Eternal</a></li>
-            
-            <li><a href="#">yumLicious</a></li>
-            
-            <li><a href="#">Deloy</a></li>
-            
-            <li><a href="#">Blinkit</a></li>
-            
-            <li><a href="#">Zomato</a></li>
-            
-            <li><a href="#">Hyperpure</a></li>
-            
-            <li><a href="#">Feeding India</a></li>
-            
-          </ul>
-        </div>
-        <div class="sec2">
-          <h3>Learn More</h3>
-          
-          <ul class="foot-ul">
-            <li><a href="#">Privacy</a></li>
-           
-            <li><a href="#">Security</a></li>
-            
-            <li><a href="#">Terms of Sevice</a></li>
-           
-            <li><a href="#">Help & Support</a></li>
-            
-            <li><a href="#">Others</a></li>
-          </ul>
-        </div>
-        <div class="sec3">
-          <h3>For Delivery</h3>
-          
-          <h3>& For Restaurents</h3>
-          
-          <ul class="foot-ul">
-            <li><a href="#">Partners with Us</a></li>
-            
-            <li><a href="#">Apps for You</a></li>
-            
-            <li><a href="#">Others</a></li>
-          </ul>
-        </div>
-        <div class="sec4">
-          <h3>Social Links</h3>
-          <br />
-          <div class="links">
-          <div class="link"><i class="fa-brands fa-linkedin-in"></i></div>
-          <div class="link"><i class="fa-brands fa-youtube"></i></div>
-          <div class="link"><i class="fa-brands fa-github"></i></div>
-          <div class="link"><i class="fa-brands fa-x-twitter"></i></div>
-          <div class="link"><i class="fa-brands fa-instagram"></i></div>
-          </div>
-          <br />
-          <div class="App-store-link">
-            <img src="/img/delivery.png" alt="Appstore" height="28px" width="32px">
-            <div class="text">
-              <span>Download on the</span>
-              <span><h3>APP STORE</h3></span>
-            </div>
-          </div><br>
-          <div class="App-store-link">
-            <img src="https://static.vecteezy.com/system/resources/previews/022/484/501/non_2x/google-play-store-icon-logo-symbol-free-png.png" alt="playstore" height="30px" width="32px">
-            <div class="text">
-              <span>Get it on</span>
-              <span><h3>PLAY STORE</h3></span>
-            </div>
+<section class="categories">
+  <h2>Explore Categories</h2>
+  <div class="category-grid">
+
+    <div class="cat">🍕 Pizza</div>
+    <div class="cat">🍔 Burger</div>
+    <div class="cat">🍜 Noodles</div>
+    <div class="cat">🍛 Biryani</div>
+    <div class="cat">🥗 Healthy</div>
+    <div class="cat">🍰 Desserts</div>
+
+  </div>
+</section>
+
+<!-- FOOD SECTION -->
+<section class="food-section container">
+
+  <div class="section-header">
+    <h2>Best Food For You 🍽</h2>
+    <p>Fresh • Tasty • Delivered Fast</p>
+  </div>
+
+  <div class="food-grid">
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/burger.png" alt="Cheese Burger">
+      <div class="card-body">
+        <h3>Cheese Burger</h3>
+        <p>Loaded with cheese & fresh veggies</p>
+
+        <div class="rating">⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹129</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Cheese Burger',129)">Add</button>
+            <button class="buy">Buy</button>
           </div>
         </div>
       </div>
-      <hr>
-      <br>
-      <div class="copyright">
-          <span>&copy;Copyright by yumLicious 2025 Pvt Ltd, You agree to your terms of service, privacy policy and content policies. All trademarks are the properties of the respective owners. All Rights Reserved.</span>
+    </article>
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/pizza.png" alt="Pizza">
+      <div class="card-body">
+        <h3>Margherita Pizza</h3>
+        <p>Classic pizza with rich sauce</p>
+
+        <div class="rating">⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹199</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Pizza',199)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
         </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </article>
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/momos.png" alt="Momos">
+      <div class="card-body">
+        <h3>Veg Momos</h3>
+        <p>Steamed with spicy chutney</p>
+
+        <div class="rating">⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹89</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Momos',89)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/pasta.png" alt="Pasta">
+      <div class="card-body">
+        <h3>White Sauce Pasta</h3>
+        <p>Creamy & delicious</p>
+
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹179</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Pasta',179)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/chicken-biryani" alt="Biryani">
+      <div class="card-body">
+        <h3>Chicken Biryani</h3>
+        <p>Rich aromatic rice</p>
+
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹249</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Biryani',249)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/dosa.png" alt="Dosa">
+      <div class="card-body">
+        <h3>Masala Dosa</h3>
+        <p>Crispy & stuffed</p>
+
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹119</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Dosa',119)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/fried-rice.png" alt="fried-rice">
+      <div class="card-body">
+        <h3>Fried Rice</h3>
+        <p>Tasty & Yummy</p>
+
+        <div class="rating">⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹80</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Fried Rice',80)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/fries.png" alt="Fries">
+      <div class="card-body">
+        <h3>Fries</h3>
+        <p>Crispy</p>
+
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹209</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Fries',209)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/chole-bhature.png" alt="chole-bhature">
+      <div class="card-body">
+        <h3>Chole Bhature</h3>
+        <p>Yummy</p>
+
+        <div class="rating">⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹250</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Chole Bhature',250)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+        
+    <!-- CARD -->
+    <article class="food-card">
+      <img src="img/sandwich.png" alt="sandwich">
+      <div class="card-body">
+        <h3>Sandwich</h3>
+        <p>Tasty & Yummy Sandwich</p>
+
+        <div class="rating">⭐⭐⭐⭐</div>
+
+        <div class="card-footer">
+          <span class="price">₹50</span>
+          <div class="card-buttons">
+            <button onclick="addToCart('Sandwich',50)">Add</button>
+            <button class="buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+<div class="restaurant-grid">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+    <h3>Pizza Hub</h3>
+    <button onclick="location.href='restaurant-details.html'">View</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+    <h3>Burger King</h3>
+    <button onclick="location.href='restaurant-details.html'">View</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+    <h3>Biryani House</h3>
+    <button onclick="location.href='restaurant-details.html'">View</button>
+  </div>
+
+  <div class="card">
+    <img src="img/healthy.jpg">
+    <h3>Healthy Bowl</h3>
+    <button onclick="location.href='restaurant-details.html'">View</button>
+  </div>
+
+</div>
+
+<!-- LOGIN POPUP -->
+<div class="popup" id="loginPopup">
+<div class="popup-box">
+<span onclick="closePopup('loginPopup')">&times;</span>
+<h2>Login</h2>
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<button>Login</button>
+</div>
+</div>
+
+<!-- SIGNUP POPUP -->
+<div class="popup" id="signupPopup">
+<div class="popup-box">
+<span onclick="closePopup('signupPopup')">&times;</span>
+<h2>Sign Up</h2>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<button>Create Account</button>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2025 yumLicious | Made by Khushi</p>
+</footer>
+<div id="loginModal" class="modal">
+  <div class="modal-box">
+    <span class="close" onclick="closeLogin()">&times;</span>
+    <h2>Login</h2>
+
+    <input type="email" id="loginEmail" placeholder="Enter Email">
+    <input type="password" id="loginPassword" placeholder="Enter Password">
+
+    <button onclick="loginUser()">Login</button>
+    <p>Don't have an account? <span onclick="switchToSignup()">Signup</span></p>
+  </div>
+</div>
+
+<div id="signupModal" class="modal">
+  <div class="modal-box">
+    <span class="close" onclick="closeSignup()">&times;</span>
+    <h2>Signup</h2>
+
+    <input type="text" id="signupName" placeholder="Enter Name">
+    <input type="email" id="signupEmail" placeholder="Enter Email">
+    <input type="password" id="signupPassword" placeholder="Enter Password">
+
+    <button onclick="signupUser()">Signup</button>
+    <p>Already have an account? <span onclick="switchToLogin()">Login</span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
