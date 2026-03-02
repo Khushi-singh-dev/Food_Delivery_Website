@@ -104,3 +104,7 @@ function sendMessage() {
   document.getElementById("subject").value = "";
   document.getElementById("message").value = "";
 }
+
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
