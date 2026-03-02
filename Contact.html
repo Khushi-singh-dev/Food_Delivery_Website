@@ -1,137 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<nav class="navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/delivery.png" />
+        <span>yumLicious</span>
+      </div>
 
-  <div class="logo">
-    <img src="img/delivery.png">
-    <span>yumLicious</span>
-  </div>
+      <!-- Hamburger -->
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-  <!-- Hamburger -->
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <!-- Sidebar Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="Orders.html">Orders</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
 
-  <!-- Sidebar Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="cart.html">Cart</a></li>
-      <li><a href="Orders.html">Orders</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
-
-    <div class="nav-buttons">
-      <button class="btn-solid" onclick="openLogin()">Login</button>
-      <button class="btn-solid" onclick="openSignup()">Signup</button>
-    </div>
-
-  </div>
-
-</nav>
-
-<section class="contact-section">
-
-  <h2 class="contact-title">Get In Touch 📞</h2>
-  <p class="contact-subtitle">We’d love to hear from you!</p>
-
-  <div class="contact-container">
-
-    <!-- LEFT INFO -->
-    <div class="contact-info">
-      <h3>Contact Details</h3>
-      <p>📍 Mumbai, India</p>
-      <p>📧 support@yumlicious.com</p>
-      <p>📞 +91 91376 xxxxx</p>
-
-      <div class="social-links">
-        <span>Follow Us</span>
-        <div>
-          <a href="#">🌐</a>
-          <a href="#">📸</a>
-          <a href="#">🐦</a>
+        <div class="nav-buttons">
+          <button class="btn-solid" onclick="openLogin()">Login</button>
+          <button class="btn-solid" onclick="openSignup()">Signup</button>
         </div>
+      </div>
+    </nav>
+
+    <section class="contact-section">
+      <h2 class="contact-title">Get In Touch 📞</h2>
+      <p class="contact-subtitle">We’d love to hear from you!</p>
+
+      <div class="contact-container">
+        <!-- LEFT INFO -->
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <p>📍 Mumbai, India</p>
+          <p>📧 support@yumlicious.com</p>
+          <p>📞 +91 91376 xxxxx</p>
+
+          <div class="social-links">
+            <span>Follow Us</span>
+            <div>
+              <a href="#">🌐</a>
+              <a href="#">📸</a>
+              <a href="#">🐦</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="contact-form">
+          <input type="text" id="name" placeholder="Full Name" />
+          <input type="email" id="email" placeholder="Email Address" />
+          <input type="text" id="subject" placeholder="Subject" />
+
+          <textarea id="message" placeholder="Your Message"></textarea>
+
+          <button class="btn-solid" onclick="sendMessage()">
+            Send Message
+          </button>
+
+          <p id="successMsg"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGIN POPUP -->
+    <div class="popup" id="loginPopup">
+      <div class="popup-box">
+        <span onclick="closePopup('loginPopup')">&times;</span>
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Login</button>
       </div>
     </div>
 
-    <!-- RIGHT FORM -->
-    <div class="contact-form">
+    <!-- SIGNUP POPUP -->
+    <div class="popup" id="signupPopup">
+      <div class="popup-box">
+        <span onclick="closePopup('signupPopup')">&times;</span>
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Create Account</button>
+      </div>
+    </div>
 
-  <input type="text" id="name" placeholder="Full Name">
-  <input type="email" id="email" placeholder="Email Address">
-  <input type="text" id="subject" placeholder="Subject">
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 yumLicious | Made by Khushi</p>
+    </footer>
+    <div id="loginModal" class="modal">
+      <div class="modal-box">
+        <span class="close" onclick="closeLogin()">&times;</span>
+        <h2>Login</h2>
 
-  <textarea id="message" placeholder="Your Message"></textarea>
+        <input type="email" id="loginEmail" placeholder="Enter Email" />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter Password"
+        />
 
-  <button class="btn-solid" onclick="sendMessage()">Send Message</button>
+        <button onclick="loginUser()">Login</button>
+        <p>
+          Don't have an account? <span onclick="switchToSignup()">Signup</span>
+        </p>
+      </div>
+    </div>
 
-  <p id="successMsg"></p>
+    <div id="signupModal" class="modal">
+      <div class="modal-box">
+        <span class="close" onclick="closeSignup()">&times;</span>
+        <h2>Signup</h2>
 
-</div>
+        <input type="text" id="signupName" placeholder="Enter Name" />
+        <input type="email" id="signupEmail" placeholder="Enter Email" />
+        <input
+          type="password"
+          id="signupPassword"
+          placeholder="Enter Password"
+        />
 
-  </div>
+        <button onclick="signupUser()">Signup</button>
+        <p>
+          Already have an account? <span onclick="switchToLogin()">Login</span>
+        </p>
+      </div>
+    </div>
 
-</section>
-
-<!-- LOGIN POPUP -->
-<div class="popup" id="loginPopup">
-<div class="popup-box">
-<span onclick="closePopup('loginPopup')">&times;</span>
-<h2>Login</h2>
-<input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
-<button>Login</button>
-</div>
-</div>
-
-<!-- SIGNUP POPUP -->
-<div class="popup" id="signupPopup">
-<div class="popup-box">
-<span onclick="closePopup('signupPopup')">&times;</span>
-<h2>Sign Up</h2>
-<input type="text" placeholder="Name">
-<input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
-<button>Create Account</button>
-</div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-<p>© 2025 yumLicious | Made by Khushi</p>
-</footer>
-<div id="loginModal" class="modal">
-  <div class="modal-box">
-    <span class="close" onclick="closeLogin()">&times;</span>
-    <h2>Login</h2>
-
-    <input type="email" id="loginEmail" placeholder="Enter Email">
-    <input type="password" id="loginPassword" placeholder="Enter Password">
-
-    <button onclick="loginUser()">Login</button>
-    <p>Don't have an account? <span onclick="switchToSignup()">Signup</span></p>
-  </div>
-</div>
-
-<div id="signupModal" class="modal">
-  <div class="modal-box">
-    <span class="close" onclick="closeSignup()">&times;</span>
-    <h2>Signup</h2>
-
-    <input type="text" id="signupName" placeholder="Enter Name">
-    <input type="email" id="signupEmail" placeholder="Enter Email">
-    <input type="password" id="signupPassword" placeholder="Enter Password">
-
-    <button onclick="signupUser()">Signup</button>
-    <p>Already have an account? <span onclick="switchToLogin()">Login</span></p>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
