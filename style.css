@@ -14,12 +14,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 15px 30px;
   background: #ff0019;
   color: white;
   position: sticky;
+  height: 70px;
   top: 0;
   z-index: 100;
+}
+.no-scroll {
+  overflow: hidden;
 }
 
 .logo {
@@ -39,7 +43,6 @@ body {
   flex-direction: row;
   list-style: none;
   gap: 20px;
-
 }
 
 .nav-links a {
@@ -570,7 +573,6 @@ margin:10px 0;
   font-size: 25px;
   z-index: 1001;
   cursor: pointer;
-  color: #cdcdcd;
 }
 
 @keyframes popup {
@@ -687,7 +689,7 @@ footer {
 .mobile-menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 330px;
 }
 
 /* MOBILE */
@@ -710,6 +712,7 @@ padding:20px;
   display: block;
   position: fixed;
   left: 15px;
+  color: #c2c2c2;
 }
 
 /* logo */
@@ -756,7 +759,7 @@ padding:20px;
   .mobile-menu{
     position: fixed;
     top: 0;
-    left: -100%;   /* hidden initially */
+    left: -100%;   
     width: 70%;
     height: 100vh;
     background: rgb(255, 255, 255);
@@ -781,7 +784,7 @@ padding:20px;
     gap: 15px;
     margin-top: 20px;
   }
-}
+
   nav ul {
     flex-direction: column;
     text-align: left;
@@ -791,9 +794,8 @@ padding:20px;
     font-size: 1.2rem;
   }
   nav a:active{
-    padding: 8px 15px;
-    border-radius: 5px;
-    }
+    color: #3c3c3c;
+  }
   .box{
     width: 95%;
     padding: 20px;
@@ -816,4 +818,5 @@ padding:20px;
   box-shadow: 0 4px 12px rgba(225, 0, 0, 0.6);
   background: linear-gradient(135deg, #ff0b0b, #ff3b3b);
   transform: scale(1.05);
+}
 }

@@ -5,28 +5,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
 <nav class="navbar">
 
-<div class="logo">
-<img src="img/delivery.png">
-<span>yumLicious</span>
-</div>
-<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-<div class="mobile-menu" id="mobileMenu">
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="About.html">About</a></li>
-<li><a href="cart.html">Cart</a></li>
-<li><a href="Orders.html">Orders</a></li>
-<li><a href="Contact.html">Contact</a></li>
-</ul>
+  <div class="logo">
+    <img src="img/delivery.png">
+    <span>yumLicious</span>
+  </div>
 
-<div class="nav-buttons">
-<button class="btn-solid" onclick="openLogin()">Login</button>
-<button class="btn-solid" onclick="openSignup()">Signup</button>
-</div>
-</div>
+  <!-- Hamburger -->
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <!-- Sidebar Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="Orders.html">Orders</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button class="btn-solid" onclick="openLogin()">Login</button>
+      <button class="btn-solid" onclick="openSignup()">Signup</button>
+    </div>
+
+  </div>
 
 </nav>
 

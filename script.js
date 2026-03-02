@@ -107,4 +107,5 @@ function sendMessage() {
 
 function toggleMenu(){
   document.getElementById("mobileMenu").classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
 }
