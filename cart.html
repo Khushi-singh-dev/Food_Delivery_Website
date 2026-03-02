@@ -41,18 +41,20 @@
 <h2 class="page-title">Your Cart 🛒</h2>
 
 <div class="box">
-  <h3>Cheese Burger - ₹129</h3>
-  <input type="number" value="1">
 
-  <h3>Pizza - ₹199</h3>
-  <input type="number" value="1">
+  <!-- Dynamic Cart Items -->
+  <div id="cart-items"></div>
 
-  <h3>Total: ₹328</h3>
+  <!-- Total -->
+  <h3 id="total-price"></h3>
 
+  <!-- Checkout -->
   <a href="checkout.html">
     <button class="btn-solid">Proceed to Checkout</button>
   </a>
+
 </div>
+
 <!-- LOGIN POPUP -->
 <div class="popup" id="loginPopup">
 <div class="popup-box">
@@ -106,8 +108,9 @@
     <p>Already have an account? <span onclick="switchToLogin()">Login</span></p>
   </div>
 </div>
-
 <script src="script.js"></script>
-
+<script>
+  displayCartItems();
+</script>
 </body>
 </html>

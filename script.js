@@ -17,9 +17,83 @@ behavior:"smooth"
 });
 }
 
+// addToCart
+function addToCart(item, price) {
 
-function addToCart(item, price){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let existing = cart.find(item => item.name === name);
+
+  if(existing){
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      name: name,
+      price: price,
+      quantity: 1
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
   alert(item + " added to cart 🛒");
+  window.location.href = "cart.html";
+}
+
+// updateCartCount
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let totalItems = 0;
+
+  cart.forEach(item => {
+    totalItems += item.quantity;
+  });
+
+  document.getElementById("cart-count").innerText = totalItems;
+}
+
+// updateQty
+function updateQty(index, qty) {
+
+  let cart = JSON.parse(localStorage.getItem("cart"));
+
+  cart[index].quantity = parseInt(qty);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  displayCartItems();
+  updateCartCount();
+}
+
+// removeItem
+function removeItem(index) {
+
+  let cart = JSON.parse(localStorage.getItem("cart"));
+
+  cart.splice(index, 1);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  displayCartItems();
+  updateCartCount();
+}
+
+// buyNow
+function buyNow(name, price) {
+
+  let cart = [];
+
+  cart.push({
+    name: name,
+    price: price,
+    quantity: 1
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  window.location.href = "cart.html";
+  alert(name + " added to cart 🛒");
 }
 
 //modal
@@ -108,4 +182,36 @@ function sendMessage() {
 function toggleMenu(){
   document.getElementById("mobileMenu").classList.toggle("active");
   document.body.classList.toggle("no-scroll");
+}
+
+function displayCartItems() {
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let container = document.getElementById("cart-items");
+  let total = 0;
+
+  container.innerHTML = "";
+
+  cart.forEach((item, index) => {
+
+    total += item.price * item.quantity;
+
+    container.innerHTML += `
+      <div class="cart-item">
+        <h4>${item.name}</h4>
+        <span class="cart-price">₹${item.price}</span>
+        <input type="number" value="${item.quantity}" min="1"
+        class="cart-qty"
+        onchange="updateQty(${index}, this.value)">
+        <button class="remove-btn" onclick="removeItem(${index})">X</button>
+      </div>
+    `;
+  });
+
+  document.getElementById("total-price").innerText = "Total: ₹" + total;
+}
+
+window.onload = function() {
+  updateCartCount();
 }

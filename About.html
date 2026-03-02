@@ -1,163 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-  <meta charset="UTF-8">
-  <title>About Us | yumLicious</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-<nav class="navbar">
+    <meta charset="UTF-8" />
+    <title>About Us | yumLicious</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <div class="logo">
-    <img src="img/delivery.png">
-    <span>yumLicious</span>
-  </div>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/delivery.png" />
+        <span>yumLicious</span>
+      </div>
 
-  <!-- Hamburger -->
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <!-- Hamburger -->
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-  <!-- Sidebar Menu -->
-  <div class="mobile-menu" id="mobileMenu">
+      <!-- Sidebar Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="Orders.html">Orders</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="cart.html">Cart</a></li>
-      <li><a href="Orders.html">Orders</a></li>
-      <li><a href="Contact.html">Contact</a></li>
-    </ul>
+        <div class="nav-buttons">
+          <button class="btn-solid" onclick="openLogin()">Login</button>
+          <button class="btn-solid" onclick="openSignup()">Signup</button>
+        </div>
+      </div>
+    </nav>
 
-    <div class="nav-buttons">
-      <button class="btn-solid" onclick="openLogin()">Login</button>
-      <button class="btn-solid" onclick="openSignup()">Signup</button>
+    <header class="about-header">
+      <h1>About yumLicious</h1>
+      <p>Delivering Happiness, One Bite at a Time 🍔</p>
+    </header>
+
+    <section class="about-section">
+      <div class="about-card">
+        <h2>Who We Are</h2>
+        <p>
+          yumLicious is a modern food delivery platform designed to connect food
+          lovers with their favorite restaurants. Our mission is to make
+          ordering food simple, fast, and enjoyable for everyone.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h2>Our Mission</h2>
+        <p>
+          We aim to deliver fresh and delicious meals directly to your doorstep.
+          With an easy-to-use interface and quick delivery system, we ensure a
+          smooth and satisfying experience.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h2>What We Offer</h2>
+        <ul>
+          <li>Fast Delivery 🚴‍♂️</li>
+          <li>Quality Food 🍕</li>
+          <li>Easy Ordering 📱</li>
+          <li>Affordable Pricing 💰</li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h2>Our Vision</h2>
+        <p>
+          To become the most loved food delivery service by providing
+          convenience, quality, and customer satisfaction.
+        </p>
+      </div>
+    </section>
+
+    <h2 class="page-title">Restaurants</h2>
+
+    <div class="box">
+      <a href="restaurant-details.html">Spicy Hub</a><br /><br />
+      <a href="restaurant-details.html">Pizza Town</a>
     </div>
 
-  </div>
+    <h2 class="page-title">Spicy Hub</h2>
 
-</nav>
+    <div class="box">
+      <p>⭐ 4.5 Rating</p>
+      <p>Delivery Time: 25 mins</p>
 
-<header class="about-header">
-  <h1>About yumLicious</h1>
-  <p>Delivering Happiness, One Bite at a Time 🍔</p>
-</header>
+      <a href="cart.html">
+        <button class="btn-solid">Order Now</button>
+      </a>
+    </div>
 
+    <!-- LOGIN POPUP -->
+    <div class="popup" id="loginPopup">
+      <div class="popup-box">
+        <span onclick="closePopup('loginPopup')">&times;</span>
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Login</button>
+      </div>
+    </div>
 
-<section class="about-section">
+    <!-- SIGNUP POPUP -->
+    <div class="popup" id="signupPopup">
+      <div class="popup-box">
+        <span onclick="closePopup('signupPopup')">&times;</span>
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Create Account</button>
+      </div>
+    </div>
 
-  <div class="about-card">
-    <h2>Who We Are</h2>
-    <p>
-      yumLicious is a modern food delivery platform designed to connect food lovers 
-      with their favorite restaurants. Our mission is to make ordering food simple,
-      fast, and enjoyable for everyone.
-    </p>
-  </div>
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 yumLicious | Made by Khushi</p>
+    </footer>
+    <div id="loginModal" class="modal">
+      <div class="modal-box">
+        <span class="close" onclick="closeLogin()">&times;</span>
+        <h2>Login</h2>
 
-  <div class="about-card">
-    <h2>Our Mission</h2>
-    <p>
-      We aim to deliver fresh and delicious meals directly to your doorstep.
-      With an easy-to-use interface and quick delivery system,
-      we ensure a smooth and satisfying experience.
-    </p>
-  </div>
+        <input type="email" id="loginEmail" placeholder="Enter Email" />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter Password"
+        />
 
-  <div class="about-card">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Fast Delivery 🚴‍♂️</li>
-      <li>Quality Food 🍕</li>
-      <li>Easy Ordering 📱</li>
-      <li>Affordable Pricing 💰</li>
-    </ul>
-  </div>
+        <button onclick="loginUser()">Login</button>
+        <p>
+          Don't have an account? <span onclick="switchToSignup()">Signup</span>
+        </p>
+      </div>
+    </div>
 
-  <div class="about-card">
-    <h2>Our Vision</h2>
-    <p>
-      To become the most loved food delivery service by providing 
-      convenience, quality, and customer satisfaction.
-    </p>
-  </div>
+    <div id="signupModal" class="modal">
+      <div class="modal-box">
+        <span class="close" onclick="closeSignup()">&times;</span>
+        <h2>Signup</h2>
 
-</section>
+        <input type="text" id="signupName" placeholder="Enter Name" />
+        <input type="email" id="signupEmail" placeholder="Enter Email" />
+        <input
+          type="password"
+          id="signupPassword"
+          placeholder="Enter Password"
+        />
 
-<h2 class="page-title">Restaurants</h2>
+        <button onclick="signupUser()">Signup</button>
+        <p>
+          Already have an account? <span onclick="switchToLogin()">Login</span>
+        </p>
+      </div>
+    </div>
 
-<div class="box">
-<a href="restaurant-details.html">Spicy Hub</a><br><br>
-<a href="restaurant-details.html">Pizza Town</a>
-</div>
-
-<h2 class="page-title">Spicy Hub</h2>
-
-<div class="box">
-<p>⭐ 4.5 Rating</p>
-<p>Delivery Time: 25 mins</p>
-
-<a href="cart.html">
-<button class="btn-solid">Order Now</button>
-</a>
-</div>
-
-<!-- LOGIN POPUP -->
-<div class="popup" id="loginPopup">
-<div class="popup-box">
-<span onclick="closePopup('loginPopup')">&times;</span>
-<h2>Login</h2>
-<input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
-<button>Login</button>
-</div>
-</div>
-
-<!-- SIGNUP POPUP -->
-<div class="popup" id="signupPopup">
-<div class="popup-box">
-<span onclick="closePopup('signupPopup')">&times;</span>
-<h2>Sign Up</h2>
-<input type="text" placeholder="Name">
-<input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
-<button>Create Account</button>
-</div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-<p>© 2025 yumLicious | Made by Khushi</p>
-</footer>
-<div id="loginModal" class="modal">
-  <div class="modal-box">
-    <span class="close" onclick="closeLogin()">&times;</span>
-    <h2>Login</h2>
-
-    <input type="email" id="loginEmail" placeholder="Enter Email">
-    <input type="password" id="loginPassword" placeholder="Enter Password">
-
-    <button onclick="loginUser()">Login</button>
-    <p>Don't have an account? <span onclick="switchToSignup()">Signup</span></p>
-  </div>
-</div>
-
-<div id="signupModal" class="modal">
-  <div class="modal-box">
-    <span class="close" onclick="closeSignup()">&times;</span>
-    <h2>Signup</h2>
-
-    <input type="text" id="signupName" placeholder="Enter Name">
-    <input type="email" id="signupEmail" placeholder="Enter Email">
-    <input type="password" id="signupPassword" placeholder="Enter Password">
-
-    <button onclick="signupUser()">Signup</button>
-    <p>Already have an account? <span onclick="switchToLogin()">Login</span></p>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
