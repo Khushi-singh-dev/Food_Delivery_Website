@@ -37,7 +37,7 @@ Food-Delivery-Website/
 
 ├── Orders.html
 
-├── delivery.html
+├── cart.html
 
 ├── About.html
 
