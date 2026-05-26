@@ -1,91 +1,135 @@
-# 🍔 Food Delivery Website
+# 🍔 YumLicious – Food Delivery Website
 
-A modern and responsive Food Delivery Website built using HTML and CSS.
-This project focuses on clean UI design, responsive layout, and beginner-friendly frontend structure.
+A modern, responsive, and visually appealing Food Delivery Website built using HTML, CSS, and JavaScript.  
+This project focuses on creating a clean user interface, responsive layouts, and an engaging frontend experience for food ordering platforms.
 
-📌 Features
+---
 
- * Responsive navigation bar
- 
- * Modern and clean UI design
- 
- * Food items display section
- 
- * Call-to-action buttons (Buy Now, Submit Feedback, Signup)
- 
- * Fully responsive for desktop, tablet, and mobile
- 
- * Beginner-friendly code structure
+# 🚀 Live Demo
 
-🛠️ Technologies Used
+🌐 **Website:**  
+https://khushi-singh-dev.github.io/Food_Delivery_Website/
 
-* HTML5 – Structure of the website
+---
 
-* CSS3 – Styling, layout, animations, responsiveness
+# 📸 Preview
 
-📂 Project Structure
+<img width="1893" height="876" alt="YumLicious Preview" src="https://github.com/user-attachments/assets/d3c34b3b-fe93-4df6-9212-9f952e453cbc" />
 
+---
+
+# ✨ Features
+
+✅ Fully responsive design  
+✅ Modern navigation bar  
+✅ Attractive hero section  
+✅ Food menu showcase section  
+✅ Smooth hover effects & transitions  
+✅ Call-to-action buttons  
+✅ Multiple pages support  
+✅ Beginner-friendly clean code structure  
+✅ Mobile-friendly layout  
+✅ Organized project structure  
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|----------|
+| HTML5 | Website structure |
+| CSS3 | Styling & responsiveness |
+| JavaScript | Interactivity |
+| Git & GitHub | Version control & deployment |
+
+---
+
+# 📂 Folder Structure
+
+```txt
 Food-Delivery-Website/
-
 │
-
 ├── index.html
-
 ├── style.css
-
 ├── script.js
-
 ├── Orders.html
-
 ├── cart.html
-
 ├── About.html
-
 ├── Contact.html
-
 ├── images/
-
-│   └── (all images used in the project)
-
+│   └── All project images
 └── README.md
+```
 
-🚀 How to Run the Project
+---
 
+# 🎯 Key Learning Outcomes
 
-##  Live Demo
+This project helped me improve:
 
-🔗 Click here - https://khushi-singh-dev.github.io/Food_Delivery_Website/
+- Responsive Web Design
+- Flexbox & CSS Layouts
+- Navigation Bar Design
+- UI/UX Design Basics
+- Project Structuring
+- GitHub Deployment
+- Frontend Development Fundamentals
 
- View the website in your browser
+---
 
-🎯 Learning Outcomes
+# 📱 Responsive Design
 
-Improved HTML & CSS skills
+The website is optimized for:
 
-Better understanding of layouts and responsiveness
+- 💻 Desktop
+- 📱 Mobile
+- 📲 Tablet
 
-Hands-on practice with real-world UI design
+---
 
-Confidence in building frontend projects
+# ⚡ Future Improvements
 
-📌 Future Improvements
+🔹 Add backend integration  
+🔹 Add login & signup authentication  
+🔹 Add shopping cart functionality  
+🔹 Add payment gateway integration  
+🔹 Add dark mode  
+🔹 Add food filtering & search  
+🔹 Add animations using JavaScript  
+🔹 Connect with database  
 
-Add JavaScript for interactivity
+---
 
-Backend integration
+# 🧠 Challenges Faced
 
-User authentication
+- Making the layout responsive on small devices
+- Managing spacing and alignment
+- Creating reusable UI sections
+- Improving overall design consistency
 
-Cart & payment system
+---
 
-🤝 Connect With Me
+# 🤝 Connect With Me
 
-GitHub: https://github.com/khushi-singh-dev
+### 👩‍💻 Khushi Singh
 
-LinkedIn: https://linkedin.com/in/khushi-singh-68294028b
+- GitHub: https://github.com/khushi-singh-dev
+- LinkedIn: https://linkedin.com/in/khushi-singh-68294028b
+- YouTube: https://www.youtube.com/@KHUSHISATISHSINGH211
 
-YouTube: https://www.youtube.com/@KHUSHISATISHSINGH211
+---
 
-⭐ If you like this project
+# ⭐ Support
 
-Don’t forget to star ⭐ the repository and share your feedback!
+If you liked this project:
+
+⭐ Star the repository  
+🍴 Fork the project  
+📢 Share your feedback
+
+---
+
+# 📌 Project Status
+
+✅ Completed  
+🚀 Continuously improving and adding new features
